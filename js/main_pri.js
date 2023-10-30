@@ -1,18 +1,30 @@
 function submitForm() {
-    $.ajax({
-        url: "/api/qry",
-        type: "POST",
-        data: {
-            // add any data you want to send to the server here
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json;charset=UTF-8'
         },
-        success: function (response) {
-            // handle the response from the server here
-        },
-        error: function (xhr, status, error) {
+        body: JSON.stringify({
+            title: 'foo',
+            body: 'bar',
+            userId: 1,
+        })
+    })
+        .then(response => {
+            if (response.ok) {
+                // handle the response from the server here
+                return response.json();
+            } else {
+                // handle any errors here
+                throw new Error('Network response was not ok.');
+            }
+        })
+        .then((json) => console.log(json))
+        .catch(error => {
             // handle any errors here
-        }
-    });
+        });
 }
+
 $(document).ready(function () {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
