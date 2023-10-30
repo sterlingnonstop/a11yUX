@@ -19,48 +19,7 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/main_pri.css">
-
-    <script>
-        function submitForm() {
-            $.ajax({
-                url: "/api/qry",
-                type: "POST",
-                data: {
-                    // add any data you want to send to the server here
-                },
-                success: function (response) {
-                    // handle the response from the server here
-                },
-                error: function (xhr, status, error) {
-                    // handle any errors here
-                }
-            });
-        }
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) {
-                    $('.navbar').slideUp(200);
-                } else {
-                    $('.navbar').slideDown(200);
-                }
-            });
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) {
-                    $('.scroll-to-top').fadeIn(200);
-                } else {
-                    $('.scroll-to-top').fadeOut(200);
-                }
-            });
-
-            $('.scroll-to-top').click(function () {
-                $('html, body').animate({
-                    scrollTop: 0
-                }, 300);
-                return false;
-            });
-        });
-
-    </script>
+    <script src="js/main_pri.js"></script>
 </head>
 
 <body>
@@ -115,6 +74,12 @@
     </header>
     <main class="mt-2">
         <div style="height: 100px;"></div>
+        <!--NOSCRIPT:START-->
+        <noscript>
+            <div class="alert alert-danger" role="alert">This site requires JavaScript to be enabled in your browser.
+                Please enable JavaScript and refresh the page.</div>
+        </noscript>
+        <!--NOSCRIPT:END-->
         <div class="container">
             <div class="row">
                 <div class="col col-lg-10 mx-auto">
@@ -171,10 +136,10 @@
         <div class="container-fluid bg-light text-gray pb-lg-3">
             <div class="row justify-content-center">
                 <div class="col-lg-9 d-flex">
-                    <div class=" w-25">
+                    <div class="w-50 w-md-25 text-center">
                         <!-- Your content here -->
-                        <h3>SubMenu</h3>
-                        <ul>
+                        <h3 class="border-bottom">SubMenu</h3>
+                        <ul class="list-unstyled">
                             <li><a href="#">SubMenu 1</a></li>
                             <li><a href="#">SubMenu 2</a></li>
                             <li><a href="#">SubMenu 3</a></li>
@@ -182,20 +147,20 @@
                             <li><a href="#">SubMenu 5</a></li>
                         </ul>
                     </div>
-                    <div class="d-inline-block w-25">
+                    <div class="w-50 w-md-25 text-center">
                         <!-- Your content here -->
-                        <h3>SubMenu2</h3>
-                        <ul>
+                        <h3 class="border-bottom">SubMenu2</h3>
+                        <ul class="list-unstyled">
                             <li><a href="#">SubMenu 1</a></li>
                             <li><a href="#">SubMenu 2</a></li>
                             <li><a href="#">SubMenu 3</a></li>
                             <li><a href="#">SubMenu 4</a></li>
                         </ul>
                     </div>
-                    <div class="d-inline-block w-25">
+                    <div class="w-50 w-md-25 text-center">
                         <!-- Your content here -->
-                        <h3>SubMenu2</h3>
-                        <ul>
+                        <h3 class="border-bottom">SubMenu3</h3>
+                        <ul class="list-unstyled">
                             <li><a href="#">SubMenu 1</a></li>
                             <li><a href="#">SubMenu 2</a></li>
                             <li><a href="#">SubMenu 3</a></li>
@@ -203,10 +168,10 @@
                             <li><a href="#">SubMenu 5</a></li>
                         </ul>
                     </div>
-                    <div class="d-inline-block w-25">
+                    <div class="w-50 w-md-25 text-center">
                         <!-- Your content here -->
-                        <h3>SubMenu2</h3>
-                        <ul>
+                        <h3 class="border-bottom">SubMenu4</h3>
+                        <ul class="list-unstyled">
                             <li><a href="#">SubMenu 1</a></li>
                             <li><a href="#">SubMenu 2</a></li>
                             <li><a href="#">SubMenu 3</a></li>
@@ -221,7 +186,7 @@
                 <div class="col-lg-9 d-flex align-items-center">
                     <img src="https://placehold.co/100x100/EEEEEE/white/svg?text=Hold" class="float-left">
                     <div class="p-2 w-100">
-                        <nav>
+                        <nav class="border-bottom">
                             <ul class="nav">
                                 <li class="nav-item"><a class="nav-link" href="#">Security Policy</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Privacy Policy</a></li>
@@ -229,7 +194,6 @@
                                 <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
                             </ul>
                         </nav>
-                        <hr>
                         <p>&copy; 2023 A11y Landing Page. All rights reserved.</p>
                     </div>
                 </div>
