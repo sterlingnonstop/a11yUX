@@ -2,6 +2,12 @@ html,
 body {
     font-size: 100%;
 }
+body.medium{
+    font-size: 120%;
+}
+body.large{
+    font-size: 200%;
+}
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -11,10 +17,36 @@ body {
     background-color: #fff;
 }
 
+.goCenter {
+    position: absolute;
+    display: block;
+    border-radius: 0 0 .4rem .3rem;
+    top: -3em;
+    background-color: black;
+    color: white;
+    padding: .6em;
+    -webkit-transition: top .3s ease-in-out;
+    transition: top .3s ease-in-out;
+    z-index: 9999;
+}
+
+.goCenter:focus {
+    position: absolute;
+    top: 0;
+    -webkit-transition: top .3s ease-in-out;
+    transition: top .3s ease-in-out;
+}
+
 .brik-font {
     font-family: 'Bree Serif', serif;
     text-decoration: none;
     color: black;
+}
+.brik-font.white {
+    color: white;
+}
+.brik-font:focus {
+    outline: 2px solid blue;
 }
 
 ul.list-unstyled.table li:nth-child(odd) {
@@ -22,17 +54,12 @@ ul.list-unstyled.table li:nth-child(odd) {
 }
 
 .scroll-to-top {
-    background-color: crimson;
-    color: #fff;
-    border-radius: 50%;
-    padding: 15px;
-    cursor: pointer;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
+

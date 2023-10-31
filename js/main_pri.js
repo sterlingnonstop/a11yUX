@@ -44,7 +44,9 @@ $(document).ready(function () {
     $('.scroll-to-top').click(function () {
         $('html, body').animate({
             scrollTop: 0
-        }, 300);
+        }, 300, function () {
+            $('a[name="top"]').focus();
+        });
         return false;
     });
 });

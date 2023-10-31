@@ -6,7 +6,10 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="A Test Page of A11y" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="MobileOptimized" content="480" />
     <title>A11y Landing Page</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -23,20 +26,21 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/main_pri.css">
     <script src="js/main_pri.js"></script>
+    <script src="js/data_fetch_todo.js"></script>
 </head>
 
 <body>
+    <a tabindex="0" class="goCenter" accesskey="m" href="#center">按 Enter 到主內容區</a>
     <header>
-        <a accesskey="U" class="brik-font" name="top" href="#top" title="上方選單連結區，此區塊列有本網站的主要連結"><span>:::</span></a>
         <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="https://placehold.co/100x50/orange/white/svg?text=LOGO" alt="Logo"
+                    <img src="https://placehold.co/100x50/orange/white/svg?text=LOGO" alt="回首頁"
                         class="d-inline-block align-text-top" title="Logo">
-                    <span class="visually-hidden">
-                        <h1>a bootstrap a11y page</h1>
-                    </span>
+                    <span class="visually-hidden"><h1>a bootstrap a11y page</h1></span>
                 </a>
+                <a accesskey="U" class="brik-font d-none d-lg-block focus" name="top" href="#top"
+                    title="上方選單連結區，此區塊列有本網站的主要連結"><span>:::</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +49,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" href="#" title="網站導覽">網站導覽</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" title="回首頁">回首頁</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Link</a>
@@ -69,15 +76,19 @@
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="button" onclick="submitForm()">Search</button>
+                        <label for="search-input" class="visually-hidden">Search</label>
+                        <input id="search-input" class="form-control me-2" type="search" placeholder="搜尋"
+                            aria-label="搜尋" autocomplete="off">
+                        <button class="btn btn-outline-success" type="submit" title="搜尋">
+                            <i class="fas fa-search"></i>
+                        </button>
                     </form>
                 </div>
             </div>
         </nav>
     </header>
     <main class="mt-2">
-        <div style="height: 50px;"></div>
+        <div style="height: 70px;"></div>
         <!--NOSCRIPT:START-->
         <noscript>
             <div class="alert alert-danger" role="alert">This site requires JavaScript to be enabled in your browser.
@@ -120,53 +131,59 @@
             <div class="row justify-content-center">
                 <div class="col-lg-9">
                     <section>
-                        <h2>最新消息</h2>
+                        <h2 class="border-left">最新消息</h2>
                         <ul class="list-unstyled table">
                             <li class="d-flex align-items-center p-2">
-                                <time datetime="2022-01-01" class="col-3">2022-01-01</time>
-                                <a href="#" class="col-9">我覺得為什麼彷彿的東西，長看來是的要可以卡已經</a>
+                                <time datetime="2022-01-01" class="col-5">2022-01-01</time>
+                                <a href="#" class="col-7">我覺得為什麼彷彿的東西，長看來是的要可以卡已經</a>
                             </li>
                             <li class="d-flex align-items-center p-2">
-                                <time datetime="2022-01-02" class="col-3">2022-01-02</time>
-                                <a href="#" class="col-9">科開那時候是看到的為什：事，就直的金的感的錢這些可試試</a>
+                                <time datetime="2022-01-02" class="col-5">2022-01-02</time>
+                                <a href="#" class="col-7">科開那時候是看到的為什：事，就直的金的感的錢這些可試試</a>
                             </li>
                             <li class="d-flex align-items-center p-2">
-                                <time datetime="2022-01-03" class="col-3">2022-01-03</time>
-                                <a href="#" class="col-9">生沒有想出來就是喔我一兄弟，我好像主要實下來</a>
+                                <time datetime="2022-01-03" class="col-5">2022-01-03</time>
+                                <a href="#" class="col-7">生沒有想出來就是喔我一兄弟，我好像主要實下來</a>
                             </li>
                             <li class="d-flex align-items-center p-2">
-                                <time datetime="2022-01-03" class="col-3">2022-01-03</time>
-                                <a href="#" class="col-9">不麼可愛兩今天還，我覺得時生氣辛苦可以才知還是可能</a>
+                                <time datetime="2022-01-03" class="col-5">2022-01-03</time>
+                                <a href="#" class="col-7">不麼可愛兩今天還，我覺得時生氣辛苦可以才知還是可能</a>
                             </li>
                             <li class="d-flex align-items-center p-2">
-                                <time datetime="2022-01-03" class="col-3">2022-01-03</time>
-                                <a href="#" class="col-9">的我我看起白話的天早，模樣看到，吧個人，真的很十文字</a>
+                                <time datetime="2022-01-03" class="col-5">2022-01-03</time>
+                                <a href="#" class="col-7">的我我看起白話的天早，模樣看到，吧個人，真的很十文字</a>
                             </li>
                             <li class="d-flex align-items-center p-2">
-                                <time datetime="2022-01-03" class="col-3">2022-01-03</time>
-                                <a href="#" class="col-9">存數的情子了情拒絕所有可以繼，了但人喜歡可能性我我就要</a>
-                            </li>                            
+                                <time datetime="2022-01-03" class="col-5">2022-01-03</time>
+                                <a href="#" class="col-7">存數的情子了情拒絕所有可以繼，了但人喜歡可能性我我就要</a>
+                            </li>
                         </ul>
-                        <span class="d-block text-end"><a href="/#" class="btn btn-primary">閱讀更多消息</a></span>
+                        <span class="d-block text-end"><a href="/#" class="btn btn-light">閱讀更多消息</a></span>
                     </section>
                     <section>
-                        <h2>Section 2 Content</h2>
-                        <p>This is Section 2 Content.</p>
+                        <h2>工作事項</h2>
+                        <div id="spinner" class="spinner-border text-primary d-flex justify-content-center" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                        <ul id="ListTodo" class="list-unstyled table">
+                        </ul>
+                        <span class="d-block text-end"><a href="/#" class="btn btn-light">閱讀更多Toto</a></span>
                     </section>
+
                     <section>
                         <h2>Section 3 Content</h2>
                         <p>This is Section 3 Content.</p>
                     </section>
-
+                    
                 </div>
             </div>
         </div>
     </main>
     <footer>
-        <a accesskey="Z" class="brik-font" name="footer" href="#footer"
-            title="下方選單連結區，此區塊列有[Security Policy]、[Privacy Policy]等連結"><span>:::</span></a>
         <h2 class="visually-hidden">Footer</h2>
-        <div class="container-fluid bg-light text-gray pb-lg-3">
+        <div class="container-fluid bg-dark text-light pb-lg-3">
+            <a accesskey="Z" class="brik-font white" name="footer" href="#footer"
+            title="下方選單連結區，此區塊列有[Security Policy]、[Privacy Policy]等連結"><span>:::</span></a>
             <div class="row justify-content-center">
                 <div class="col-lg-9 d-flex">
                     <div class="w-50 w-md-25 text-center">
@@ -217,25 +234,34 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-9 d-flex align-items-center">
-                    <img src="https://placehold.co/100x100/EEEEEE/white/svg?text=Hold" class="float-left">
-                    <div class="p-2 w-100">
-                        <nav class="border-bottom">
-                            <ul class="nav">
-                                <li class="nav-item"><a class="nav-link" href="#">Security Policy</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Privacy Policy</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Open Data</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                            </ul>
-                        </nav>
-                        <span class="d-block">&copy; 2023 A11y Landing Page. All rights reserved.</span>
-                        <img src="https://placehold.co/150x53/EEEEEE/white/svg?text=Hold">
+                    <img src="https://placehold.co/100x100/66B2FF/white/svg?text=Hold" class="float-left">
+                    <div class="p-2 w-100 d-flex justify-content-between">
+                        <div>
+                            <nav class="border-bottom">
+                                <ul class="nav">
+                                    <li class="nav-item"><a class="nav-link" href="#">Security Policy</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Privacy Policy</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Open Data</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <img class="a11ylogo" src="https://placehold.co/150x53/00CC66/white/svg?text=Hold">
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-9 d-flex justify-content-center">
+                    
+
+                </div>
+            </div>
         </div>
+        <div class="bg-light text-center p-2">&copy; 2023 A11y Landing Page. All rights reserved.</div>
     </footer>
-    <a href="#" class="scroll-to-top" title="Scroll To Top"><i class="fas fa-arrow-up"></i><span
-            class="visually-hidden">Scroll To Top</span></a>
+    <a href="#top" class="scroll-to-top btn btn-danger rounded-circle" title="Scroll To Top"><i
+            class="fas fa-arrow-up"></i><span class="visually-hidden">Scroll To Top</span></a>
 </body>
 
 </html>
