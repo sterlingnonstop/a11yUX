@@ -10,9 +10,9 @@ body.large{
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans','Chivo Mono', monospace, 'Noto Sans TC', sans-serif;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.6;
     color: #333;
     background-color: #fff;
 }
@@ -63,3 +63,8 @@ ul.list-unstyled.table li:nth-child(odd) {
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
 
+/* Fonts*/
+h2.bold{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+}

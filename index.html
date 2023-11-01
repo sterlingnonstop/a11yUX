@@ -24,6 +24,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;500&family=Noto+Sans+TC:wght@500&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS-->
     <link rel="stylesheet" href="css/main_pri.css">
     <script src="js/main_pri.js"></script>
     <script src="js/data_fetch_todo.js"></script>
@@ -35,9 +44,11 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="https://placehold.co/100x50/orange/white/svg?text=LOGO" alt="回首頁"
-                        class="d-inline-block align-text-top" title="Logo">
-                    <span class="visually-hidden"><h1>a bootstrap a11y page</h1></span>
+                    <img src="https://placehold.co/300x70/orange/white/svg?text=LOGO" alt="回首頁"
+                        class="d-inline-block align-text-top img-fluid" title="Logo">
+                    <span class="visually-hidden">
+                        <h1>a bootstrap a11y page</h1>
+                    </span>
                 </a>
                 <a accesskey="U" class="brik-font d-none d-lg-block focus" name="top" href="#top"
                     title="上方選單連結區，此區塊列有本網站的主要連結"><span>:::</span></a>
@@ -55,34 +66,48 @@
                             <a class="nav-link active" aria-current="page" href="#" title="回首頁">回首頁</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#">關於我們</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                Dropdown
+                                競賽活動
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">排球</a></li>
+                                <li><a class="dropdown-item" href="#">鐵人三項</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">其他項目...</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                藝文教學
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">插花鑑賞</a></li>
+                                <li><a class="dropdown-item" href="#">海底撈月</a></li>
+                                <li><a class="dropdown-item" href="#">導演</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">其他項目...</a></li>
+                            </ul>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <label for="search-input" class="visually-hidden">Search</label>
-                        <input id="search-input" class="form-control me-2" type="search" placeholder="搜尋"
-                            aria-label="搜尋" autocomplete="off">
-                        <button class="btn btn-outline-success" type="submit" title="搜尋">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </form>
+                    <div>
+                        <form class="d-flex" role="search">
+                            <label for="search-input" class="visually-hidden">搜尋</label>
+                            <input id="search-input" class="form-control me-2" type="search" placeholder="搜尋"
+                                aria-label="搜尋" autocomplete="off">
+                            <button class="btn btn-outline-success" type="submit" title="搜尋">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>    
                 </div>
             </div>
         </nav>
@@ -91,8 +116,7 @@
         <div style="height: 70px;"></div>
         <!--NOSCRIPT:START-->
         <noscript>
-            <div class="alert alert-danger" role="alert">This site requires JavaScript to be enabled in your browser.
-                Please enable JavaScript and refresh the page.</div>
+            <div class="alert alert-danger" role="alert">『您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態』</div>
         </noscript>
         <!--NOSCRIPT:END-->
         <a accesskey="C" class="brik-font" name="center" href="#center" title="主內容區"><span>:::</span></a>
@@ -131,7 +155,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-9">
                     <section>
-                        <h2 class="border-left">最新消息</h2>
+                        <h2 class="border-left bold">最新消息</h2>
                         <ul class="list-unstyled table">
                             <li class="d-flex align-items-center p-2">
                                 <time datetime="2022-01-01" class="col-5">2022-01-01</time>
@@ -158,23 +182,33 @@
                                 <a href="#" class="col-7">存數的情子了情拒絕所有可以繼，了但人喜歡可能性我我就要</a>
                             </li>
                         </ul>
-                        <span class="d-block text-end"><a href="/#" class="btn btn-light">閱讀更多消息</a></span>
+                        <span class="d-block text-end"><a href="/#" class="btn btn-light"><i class="fas fa-plus"></i>閱讀更多消息</a></span>
                     </section>
                     <section>
-                        <h2>工作事項</h2>
-                        <div id="spinner" class="spinner-border text-primary d-flex justify-content-center" role="status">
+                        <h2 class="bold">工作事項</h2>
+                        <div id="spinner" class="spinner-border text-primary d-flex justify-content-center"
+                            role="status">
                             <span class="sr-only">Loading...</span>
                         </div>
                         <ul id="ListTodo" class="list-unstyled table">
                         </ul>
-                        <span class="d-block text-end"><a href="/#" class="btn btn-light">閱讀更多Toto</a></span>
+                        <span class="d-block text-end"><a href="/#" class="btn btn-light"><i class="fas fa-plus"></i> 閱讀更多工作事項</a></span>
                     </section>
 
                     <section>
-                        <h2>Section 3 Content</h2>
-                        <p>This is Section 3 Content.</p>
+                        <h2 class="bold">活動照片</h2>
+                        <p>
+                            <figure class="figure">
+                                <img src="https://placehold.co/400x300/gray/white/svg?text=Hold" class="figure-img img-fluid rounded" alt="a photo">
+                                <figcaption class="figure-caption">一張照片.</figcaption>
+                              </figure>
+                              <figure class="figure">
+                                <img src="https://placehold.co/400x300/gray/white/svg?text=Hold" class="figure-img img-fluid rounded" alt="a photo">
+                                <figcaption class="figure-caption">另一張照片.</figcaption>
+                              </figure>                              
+                        </p>
                     </section>
-                    
+
                 </div>
             </div>
         </div>
@@ -183,7 +217,7 @@
         <h2 class="visually-hidden">Footer</h2>
         <div class="container-fluid bg-dark text-light pb-lg-3">
             <a accesskey="Z" class="brik-font white" name="footer" href="#footer"
-            title="下方選單連結區，此區塊列有[Security Policy]、[Privacy Policy]等連結"><span>:::</span></a>
+                title="下方選單連結區，此區塊列有[Security Policy]、[Privacy Policy]等連結"><span>:::</span></a>
             <div class="row justify-content-center">
                 <div class="col-lg-9 d-flex">
                     <div class="w-50 w-md-25 text-center">
@@ -236,16 +270,12 @@
                 <div class="col-lg-9 d-flex align-items-center">
                     <img src="https://placehold.co/100x100/66B2FF/white/svg?text=Hold" class="float-left">
                     <div class="p-2 w-100 d-flex justify-content-between">
-                        <div>
-                            <nav class="border-bottom">
-                                <ul class="nav">
-                                    <li class="nav-item"><a class="nav-link" href="#">Security Policy</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Privacy Policy</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Open Data</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
+                        <nav class="border-bottom">
+                            <ul class="nav">
+                                <li class="nav-item"><a class="nav-link" href="#">隱私權及資訊安全政策</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">開放資料宣告</a></li>
+                            </ul>
+                        </nav>
 
                         <img class="a11ylogo" src="https://placehold.co/150x53/00CC66/white/svg?text=Hold">
                     </div>
@@ -253,8 +283,9 @@
             </div>
             <div class="row">
                 <div class="col-lg-9 d-flex justify-content-center">
-                    
-
+                    地址: 99999 土星市衛星一區場景路100號200F<br>
+                    電話: 00-0000-0000<br>
+                    信箱: nouser@fakemail.xx
                 </div>
             </div>
         </div>
