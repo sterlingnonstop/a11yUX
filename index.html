@@ -39,6 +39,17 @@
 </head>
 
 <body>
+    <!--For Width Test:Start-->
+    <div class="fixed-top">
+        <div class="d-sm-none">mini 0 - 576</div>
+        <div class="d-none d-sm-block d-md-none">sm 576 - 768</div>
+        <div class="d-none d-md-block d-lg-none">md 768 - 992</div>
+        <div class="d-none d-lg-block d-xl-none">lg 992- 1200</div>
+        <div class="d-none d-xl-block d-xxl-none">xl 1200- 1400</div>
+        <div class="d-none d-xxl-block">xxl 1400- ?</div>
+    </div>
+    <!--For Width Test:End-->
+
     <a tabindex="0" class="goCenter" accesskey="m" href="#center">按 Enter 到主內容區</a>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm fixed-top">
@@ -104,10 +115,10 @@
                             <input id="search-input" class="form-control me-2" type="search" placeholder="搜尋"
                                 aria-label="搜尋" autocomplete="off">
                             <button class="btn btn-outline-success" type="submit" title="搜尋">
-                                <i class="fas fa-search"></i>
+                                <i class="fas fa-search"></i><span class="visually-hidden">搜尋</span>
                             </button>
                         </form>
-                    </div>    
+                    </div>
                 </div>
             </div>
         </nav>
@@ -158,31 +169,32 @@
                         <h2 class="border-left bold">最新消息</h2>
                         <ul class="list-unstyled table">
                             <li class="d-flex align-items-center p-2">
-                                <time datetime="2022-01-01" class="col-5">2022-01-01</time>
-                                <a href="#" class="col-7">我覺得為什麼彷彿的東西，長看來是的要可以卡已經</a>
+                                <time datetime="2022-01-01" class="col-sm-3">2022-01-01</time>
+                                <a href="#" class="col-sm-9">我覺得為什麼彷彿的東西，長看來是的要可以卡已經</a>
                             </li>
                             <li class="d-flex align-items-center p-2">
-                                <time datetime="2022-01-02" class="col-5">2022-01-02</time>
-                                <a href="#" class="col-7">科開那時候是看到的為什：事，就直的金的感的錢這些可試試</a>
+                                <time datetime="2022-01-02" class="col-sm-3">2022-01-02</time>
+                                <a href="#" class="col-sm-9">科開那時候是看到的為什：事，就直的金的感的錢這些可試試</a>
                             </li>
                             <li class="d-flex align-items-center p-2">
-                                <time datetime="2022-01-03" class="col-5">2022-01-03</time>
-                                <a href="#" class="col-7">生沒有想出來就是喔我一兄弟，我好像主要實下來</a>
+                                <time datetime="2022-01-03" class="col-sm-3">2022-01-03</time>
+                                <a href="#" class="col-sm-9">生沒有想出來就是喔我一兄弟，我好像主要實下來</a>
                             </li>
                             <li class="d-flex align-items-center p-2">
-                                <time datetime="2022-01-03" class="col-5">2022-01-03</time>
-                                <a href="#" class="col-7">不麼可愛兩今天還，我覺得時生氣辛苦可以才知還是可能</a>
+                                <time datetime="2022-01-03" class="col-sm-3">2022-01-03</time>
+                                <a href="#" class="col-sm-9">不麼可愛兩今天還，我覺得時生氣辛苦可以才知還是可能</a>
                             </li>
                             <li class="d-flex align-items-center p-2">
-                                <time datetime="2022-01-03" class="col-5">2022-01-03</time>
-                                <a href="#" class="col-7">的我我看起白話的天早，模樣看到，吧個人，真的很十文字</a>
+                                <time datetime="2022-01-03" class="col-sm-3">2022-01-03</time>
+                                <a href="#" class="col-sm-9">的我我看起白話的天早，模樣看到，吧個人，真的很十文字</a>
                             </li>
                             <li class="d-flex align-items-center p-2">
-                                <time datetime="2022-01-03" class="col-5">2022-01-03</time>
-                                <a href="#" class="col-7">存數的情子了情拒絕所有可以繼，了但人喜歡可能性我我就要</a>
+                                <time datetime="2022-01-03" class="col-sm-3">2022-01-03</time>
+                                <a href="#" class="col-sm-9">存數的情子了情拒絕所有可以繼，了但人喜歡可能性我我就要</a>
                             </li>
                         </ul>
-                        <span class="d-block text-end"><a href="/#" class="btn btn-light"><i class="fas fa-plus"></i>閱讀更多消息</a></span>
+                        <span class="d-block text-end"><a href="/#" class="btn btn-light"><i
+                                    class="fas fa-plus"></i>閱讀更多消息</a></span>
                     </section>
                     <section>
                         <h2 class="bold">工作事項</h2>
@@ -192,20 +204,23 @@
                         </div>
                         <ul id="ListTodo" class="list-unstyled table">
                         </ul>
-                        <span class="d-block text-end"><a href="/#" class="btn btn-light"><i class="fas fa-plus"></i> 閱讀更多工作事項</a></span>
+                        <span class="d-block text-end"><a href="/#" class="btn btn-light"><i class="fas fa-plus"></i>
+                                閱讀更多工作事項</a></span>
                     </section>
 
                     <section>
                         <h2 class="bold">活動照片</h2>
                         <p>
-                            <figure class="figure">
-                                <img src="https://placehold.co/400x300/gray/white/svg?text=Hold" class="figure-img img-fluid rounded" alt="a photo">
-                                <figcaption class="figure-caption">一張照片.</figcaption>
-                              </figure>
-                              <figure class="figure">
-                                <img src="https://placehold.co/400x300/gray/white/svg?text=Hold" class="figure-img img-fluid rounded" alt="a photo">
-                                <figcaption class="figure-caption">另一張照片.</figcaption>
-                              </figure>                              
+                        <figure class="figure">
+                            <img src="https://placehold.co/400x300/gray/white/svg?text=Hold"
+                                class="figure-img img-fluid rounded" alt="a photo">
+                            <figcaption class="figure-caption">一張照片.</figcaption>
+                        </figure>
+                        <figure class="figure">
+                            <img src="https://placehold.co/400x300/gray/white/svg?text=Hold"
+                                class="figure-img img-fluid rounded" alt="a photo">
+                            <figcaption class="figure-caption">另一張照片.</figcaption>
+                        </figure>
                         </p>
                     </section>
 
@@ -222,74 +237,79 @@
                 <div class="col-lg-9 d-flex">
                     <div class="w-50 w-md-25 text-center">
                         <!-- Your content here -->
-                        <h3 class="border-bottom">SubMenu</h3>
+                        <h3 class="border-bottom">早餐主餐</h3>
                         <ul class="list-unstyled">
-                            <li><a href="#">SubMenu 1</a></li>
-                            <li><a href="#">SubMenu 2</a></li>
-                            <li><a href="#">SubMenu 3</a></li>
-                            <li><a href="#">SubMenu 4</a></li>
-                            <li><a href="#">SubMenu 5</a></li>
+                            <li><a href="#">義式奶昔</a></li>
+                            <li><a href="#">法式吐司</a></li>
+                            <li><a href="#">經典煎蛋</a></li>
+                            <li><a href="#">早餐三明治</a></li>
+                            <li><a href="#">玉米片堡</a></li>
                         </ul>
                     </div>
                     <div class="w-50 w-md-25 text-center">
                         <!-- Your content here -->
-                        <h3 class="border-bottom">SubMenu2</h3>
+                        <h3 class="border-bottom">早餐配菜</h3>
                         <ul class="list-unstyled">
-                            <li><a href="#">SubMenu 1</a></li>
-                            <li><a href="#">SubMenu 2</a></li>
-                            <li><a href="#">SubMenu 3</a></li>
-                            <li><a href="#">SubMenu 4</a></li>
+                            <li><a href="#">熱香腸</a></li>
+                            <li><a href="#">玉米鬆餅</a></li>
+                            <li><a href="#">燻肉條</a></li>
+                            <li><a href="#">優格杯</a></li>
+                            <li><a href="#">水果切片</a></li>
                         </ul>
                     </div>
                     <div class="w-50 w-md-25 text-center">
                         <!-- Your content here -->
-                        <h3 class="border-bottom">SubMenu3</h3>
+                        <h3 class="border-bottom">健康選擇</h3>
                         <ul class="list-unstyled">
-                            <li><a href="#">SubMenu 1</a></li>
-                            <li><a href="#">SubMenu 2</a></li>
-                            <li><a href="#">SubMenu 3</a></li>
-                            <li><a href="#">SubMenu 4</a></li>
-                            <li><a href="#">SubMenu 5</a></li>
+                            <li><a href="#">水煮蛋</a></li>
+                            <li><a href="#">鮭魚三明治</a></li>
+                            <li><a href="#">鮮果沙拉</a></li>
+                            <li><a href="#">紅蘋果鬆餅</a></li>
                         </ul>
                     </div>
                     <div class="w-50 w-md-25 text-center">
                         <!-- Your content here -->
-                        <h3 class="border-bottom">SubMenu4</h3>
+                        <h3 class="border-bottom">飲品</h3>
                         <ul class="list-unstyled">
-                            <li><a href="#">SubMenu 1</a></li>
-                            <li><a href="#">SubMenu 2</a></li>
-                            <li><a href="#">SubMenu 3</a></li>
-                            <li><a href="#">SubMenu 4</a></li>
-                            <li><a href="#">SubMenu 5</a></li>
-                            <li><a href="#">SubMenu 6</a></li>
+                            <li><a href="#">鮮榨果汁</a></li>
+                            <li><a href="#">熱巧克力</a></li>
+                            <li><a href="#">拿鐵咖啡</a></li>
+                            <li><a href="#">綠茶</a></li>
+                            <li><a href="#">椰奶燕麥拿鐵</a></li>
+                            <li><a href="#">冰咖啡</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-9 d-flex align-items-center">
-                    <img src="https://placehold.co/100x100/66B2FF/white/svg?text=Hold" class="float-left">
-                    <div class="p-2 w-100 d-flex justify-content-between">
-                        <nav class="border-bottom">
-                            <ul class="nav">
-                                <li class="nav-item"><a class="nav-link" href="#">隱私權及資訊安全政策</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">開放資料宣告</a></li>
-                            </ul>
-                        </nav>
-
-                        <img class="a11ylogo" src="https://placehold.co/150x53/00CC66/white/svg?text=Hold">
-                    </div>
+                <div class="col-3 col-md-2 col-lg-2 col-xl-1"><a href="#" target="_blank" title="贊助單位(開新視窗)"><img
+                            src="https://placehold.co/100x100/66B2FF/white/svg?text=Hold" alt="贊助單位"></a></div>
+                <div class="col-9 col-md-6 col-lg-6">
+                    <ul class="list-unstyled">
+                        <li>委辦單位: 銀河聯邦法爾翠星無障礙辦公室</li>
+                        <li>地址: 99999 土星市衛星一區場景路100號200F <a
+                                href="https://www.google.com/maps/search/?api=1&query=%e5%8d%97%e6%a5%b5%e6%b4%b2"
+                                target="_blank" title="參考Google地圖(開新視窗)"><i class="fas fa-map-marker-alt"></i><span
+                                    class="visually-hidden">參考Google地圖</span></a></li>
+                        <li>電話: 00-0000-0000 #0000</li>
+                        <li>信箱: nouser@fakemail.xx</li>
+                        <li>瀏覽人次: 99999999999</li>
+                    </ul>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-9 d-flex justify-content-center">
-                    地址: 99999 土星市衛星一區場景路100號200F<br>
-                    電話: 00-0000-0000<br>
-                    信箱: nouser@fakemail.xx
+                <div class="col col-md-2 col-lg-2 mt-2 mt-md-0">
+                    <a href="#" target="_blank" title="認證標章(開新視窗)"><img class="a11ylogo"
+                            src="https://placehold.co/150x53/00CC66/white/svg?text=Hold" alt="認證標章"></a>
+                    <a href="#" target="_blank" title="認證標章(開新視窗)"><img class="a11ylogo"
+                            src="https://placehold.co/150x53/0066CC/white/svg?text=Hold" alt="認證標章"></a>
                 </div>
             </div>
         </div>
-        <div class="bg-light text-center p-2">&copy; 2023 A11y Landing Page. All rights reserved.</div>
+        <div class="bg-light text-center p-2">
+            <a class="btn btn-sm btn-outline-success" href="#">隱私權及資訊安全政策</a>
+            <a class="btn btn-sm btn-outline-success" href="#">開放資料宣告</a>
+            <br>
+            &copy; 2023 A11y Landing Page. All rights reserved.
+        </div>
     </footer>
     <a href="#top" class="scroll-to-top btn btn-danger rounded-circle" title="Scroll To Top"><i
             class="fas fa-arrow-up"></i><span class="visually-hidden">Scroll To Top</span></a>

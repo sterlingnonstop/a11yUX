@@ -7,7 +7,7 @@ $(document).ready(function() {
                     const listTodo = document.getElementById('ListTodo');
                     
                     top10Items.forEach(item => {
-                        listTodo.innerHTML += `<li class="d-flex align-items-center p-2"><id class="col-5">${item.id}</id><a href="#" class="col-7">${item.title}</a></li>`;
+                        listTodo.innerHTML += `<li class="d-flex align-items-center p-2"><id class="col-5 col-sm-3">${item.id}</id><a href="#" class="col-7 col-sm-9">${item.title}</a></li>`;
                     });
                     document.getElementById('spinner').classList.add('d-none');
                     listTodo.classList.remove('d-none');
