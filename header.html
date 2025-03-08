@@ -1,0 +1,84 @@
+<!--For Width Test:Start-->
+<div class="fixed-top">
+    <div class="d-sm-none">mini 0 - 576</div>
+    <div class="d-none d-sm-block d-md-none">sm 576 - 768</div>
+    <div class="d-none d-md-block d-lg-none">md 768 - 992</div>
+    <div class="d-none d-lg-block d-xl-none">lg 992- 1200</div>
+    <div class="d-none d-xl-block d-xxl-none">xl 1200- 1400</div>
+    <div class="d-none d-xxl-block">xxl 1400- ?</div>
+</div>
+<!--For Width Test:End-->
+
+<a tabindex="0" class="goCenter" accesskey="m" href="#center">按 Enter 到主內容區</a>
+<header role="banner">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm fixed-top" role="navigation" aria-label="Main navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://placehold.co/300x70/orange/white/svg?text=LOGO" alt="回首頁"
+                    class="d-inline-block align-text-top img-fluid" title="Logo">
+                <span class="visually-hidden">
+                    <h1>a bootstrap a11y page</h1>
+                </span>
+            </a>
+            <a accesskey="U" class="brik-font d-none d-lg-block focus" name="top" href="#top"
+                title="上方選單連結區，此區塊列有本網站的主要連結"><span>:::</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" title="網站導覽">網站導覽</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html" title="回首頁">回首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" title="關於我們">關於我們</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            競賽活動
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">排球</a></li>
+                            <li><a class="dropdown-item" href="#">鐵人三項</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">其他項目...</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            藝文教學
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">插花鑑賞</a></li>
+                            <li><a class="dropdown-item" href="#">海底撈月</a></li>
+                            <li><a class="dropdown-item" href="#">導演</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">其他項目...</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div>
+                    <form class="d-flex" role="search">
+                        <label for="search-input" class="visually-hidden">站內全文檢索</label>
+                        <input id="search-input" class="form-control me-2" type="search" placeholder="站內全文檢索"
+                            aria-label="搜尋" autocomplete="off">
+                        <button class="btn btn-outline-success" type="submit" title="站內全文檢索">
+                            <i class="fas fa-search"></i><span class="visually-hidden">搜尋</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

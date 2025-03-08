@@ -33,95 +33,30 @@
 
     <!-- Custom CSS-->
     <link rel="stylesheet" href="css/main_pri.css">
+    <script src="js/utility.js"></script>
     <script src="js/main_pri.js"></script>
     <script src="js/data_fetch_todo.js"></script>
 </head>
 
 <body>
-    <!--For Width Test:Start-->
-    <div class="fixed-top">
-        <div class="d-sm-none">mini 0 - 576</div>
-        <div class="d-none d-sm-block d-md-none">sm 576 - 768</div>
-        <div class="d-none d-md-block d-lg-none">md 768 - 992</div>
-        <div class="d-none d-lg-block d-xl-none">lg 992- 1200</div>
-        <div class="d-none d-xl-block d-xxl-none">xl 1200- 1400</div>
-        <div class="d-none d-xxl-block">xxl 1400- ?</div>
-    </div>
-    <!--For Width Test:End-->
+    <!-- Include header -->
+    <div id="header-placeholder"></div>
+    <script>
+        $(function(){
+            $("#header-placeholder").load("header.html", function() {
+                // Ensure focus management
+                document.querySelector('.navbar-toggler').focus();
+                // Announce the update for screen readers
+                const liveRegion = document.createElement('div');
+                liveRegion.setAttribute('aria-live', 'polite');
+                liveRegion.className = 'visually-hidden';
+                liveRegion.textContent = 'Navigation loaded';
+                document.body.appendChild(liveRegion);
+                setTimeout(() => document.body.removeChild(liveRegion), 1000);
+            });
+        });
+    </script>
 
-    <a tabindex="0" class="goCenter" accesskey="m" href="#center">按 Enter 到主內容區</a>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="https://placehold.co/300x70/orange/white/svg?text=LOGO" alt="回首頁"
-                        class="d-inline-block align-text-top img-fluid" title="Logo">
-                    <span class="visually-hidden">
-                        <h1>a bootstrap a11y page</h1>
-                    </span>
-                </a>
-                <a accesskey="U" class="brik-font d-none d-lg-block focus" name="top" href="#top"
-                    title="上方選單連結區，此區塊列有本網站的主要連結"><span>:::</span></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#" title="網站導覽">網站導覽</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#" title="回首頁">回首頁</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">關於我們</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                競賽活動
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">排球</a></li>
-                                <li><a class="dropdown-item" href="#">鐵人三項</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">其他項目...</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                藝文教學
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">插花鑑賞</a></li>
-                                <li><a class="dropdown-item" href="#">海底撈月</a></li>
-                                <li><a class="dropdown-item" href="#">導演</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">其他項目...</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div>
-                        <form class="d-flex" role="search">
-                            <label for="search-input" class="visually-hidden">站內全文檢索</label>
-                            <input id="search-input" class="form-control me-2" type="search" placeholder="站內全文檢索"
-                                aria-label="搜尋" autocomplete="off">
-                            <button class="btn btn-outline-success" type="submit" title="站內全文檢索">
-                                <i class="fas fa-search"></i><span class="visually-hidden">搜尋</span>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
     <main class="mt-2">
         <div style="height: 70px;"></div>
         <!--NOSCRIPT:START-->
@@ -248,91 +183,22 @@
             </div>
         </div>
     </main>
-    <footer>
-        <h2 class="visually-hidden">Footer</h2>
-        <div class="container-fluid bg-dark text-light pb-lg-3">
-            <a accesskey="Z" class="brik-font white" name="footer" href="#footer"
-                title="下方選單連結區，此區塊列有[Security Policy]、[Privacy Policy]等連結"><span>:::</span></a>
-            <div class="row justify-content-center">
-                <div class="col-lg-9 d-flex">
-                    <div class="w-50 w-md-25 text-center">
-                        <!-- Your content here -->
-                        <h3 class="border-bottom">早餐主餐</h3>
-                        <ul class="list-unstyled">
-                            <li><a href="#">義式奶昔</a></li>
-                            <li><a href="#">法式吐司</a></li>
-                            <li><a href="#">經典煎蛋</a></li>
-                            <li><a href="#">早餐三明治</a></li>
-                            <li><a href="#">玉米片堡</a></li>
-                        </ul>
-                    </div>
-                    <div class="w-50 w-md-25 text-center">
-                        <!-- Your content here -->
-                        <h3 class="border-bottom">早餐配菜</h3>
-                        <ul class="list-unstyled">
-                            <li><a href="#">熱香腸</a></li>
-                            <li><a href="#">玉米鬆餅</a></li>
-                            <li><a href="#">燻肉條</a></li>
-                            <li><a href="#">優格杯</a></li>
-                            <li><a href="#">水果切片</a></li>
-                        </ul>
-                    </div>
-                    <div class="w-50 w-md-25 text-center">
-                        <!-- Your content here -->
-                        <h3 class="border-bottom">健康選擇</h3>
-                        <ul class="list-unstyled">
-                            <li><a href="#">水煮蛋</a></li>
-                            <li><a href="#">鮭魚三明治</a></li>
-                            <li><a href="#">鮮果沙拉</a></li>
-                            <li><a href="#">紅蘋果鬆餅</a></li>
-                        </ul>
-                    </div>
-                    <div class="w-50 w-md-25 text-center">
-                        <!-- Your content here -->
-                        <h3 class="border-bottom">飲品</h3>
-                        <ul class="list-unstyled">
-                            <li><a href="#">鮮榨果汁</a></li>
-                            <li><a href="#">熱巧克力</a></li>
-                            <li><a href="#">拿鐵咖啡</a></li>
-                            <li><a href="#">綠茶</a></li>
-                            <li><a href="#">椰奶燕麥拿鐵</a></li>
-                            <li><a href="#">冰咖啡</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-3 col-md-2 col-lg-2 col-xl-1"><a href="#" target="_blank" title="贊助單位(開新視窗)"><img
-                            src="https://placehold.co/100x100/66B2FF/white/svg?text=Hold" alt="贊助單位"></a></div>
-                <div class="col-9 col-md-6 col-lg-6">
-                    <ul class="list-unstyled">
-                        <li>委辦單位: 銀河聯邦法爾翠星無障礙辦公室</li>
-                        <li>地址: 99999 土星市衛星一區場景路100號200F <a
-                                href="https://www.google.com/maps/search/?api=1&query=%e5%8d%97%e6%a5%b5%e6%b4%b2"
-                                target="_blank" title="參考Google地圖(開新視窗)"><i class="fas fa-map-marker-alt"></i><span
-                                    class="visually-hidden">參考Google地圖</span></a></li>
-                        <li>電話: 00-0000-0000 #0000</li>
-                        <li>信箱: nouser@fakemail.xx</li>
-                        <li>瀏覽人次: 99999999999</li>
-                    </ul>
-                </div>
-                <div class="col col-md-2 col-lg-2 mt-2 mt-md-0">
-                    <a href="#" target="_blank" title="認證標章(開新視窗)"><img class="a11ylogo"
-                            src="https://placehold.co/150x53/00CC66/white/svg?text=Hold" alt="認證標章"></a>
-                    <a href="#" target="_blank" title="認證標章(開新視窗)"><img class="a11ylogo"
-                            src="https://placehold.co/150x53/0066CC/white/svg?text=Hold" alt="認證標章"></a>
-                </div>
-            </div>
-        </div>
-        <div class="bg-light text-center p-2">
-            <a class="btn btn-sm btn-outline-success" href="#">隱私權及資訊安全政策</a>
-            <a class="btn btn-sm btn-outline-success" href="#">開放資料宣告</a>
-            <br>
-            &copy; 2023 A11y Landing Page. All rights reserved.
-        </div>
-    </footer>
-    <a href="#top" class="scroll-to-top btn btn-danger rounded-circle" title="Scroll To Top"><i
-            class="fas fa-arrow-up"></i><span class="visually-hidden">Scroll To Top</span></a>
+
+    <!-- Include footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        $(function(){
+            $("#footer-placeholder").load("footer.html", function() {
+                // Announce the update for screen readers
+                const liveRegion = document.createElement('div');
+                liveRegion.setAttribute('aria-live', 'polite');
+                liveRegion.className = 'visually-hidden';
+                liveRegion.textContent = 'Footer loaded';
+                document.body.appendChild(liveRegion);
+                setTimeout(() => document.body.removeChild(liveRegion), 1000);
+            });
+        });
+    </script>
 </body>
 
 </html>
